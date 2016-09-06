@@ -29,7 +29,7 @@ class LocaleMiddleware(object):
         try:
             code = getattr(request, 'LANGUAGE_CODE', get_language())
             locale = Locale.parse(code, sep='-')
-        except (ValueError, UnknownLocaleError):
+        except (ValueError, UnknownLocaleError):  # pragma: no cover
             pass
         else:
             _thread_locals.locale = request.locale = locale
