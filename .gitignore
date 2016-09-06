@@ -1,7 +1,8 @@
-build
+*.pyc
 .cache
 .coverage
-dist
-*.pyc
-django_babel.egg-info
 .tox
+build
+dist
+django_babel.egg-info
+htmlcov
